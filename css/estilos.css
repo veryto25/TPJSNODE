@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+   
+    
+}
+
+body {
+
+    background-image: radial-gradient(circle, rgba(250, 157, 201, 0.2) 0%, rgba(253, 226, 226, 0.1) 100%), url(./img/brideOne.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-attachment: fixed;
+
+    font-family: 'Italianno', cursive;
+    display: flex;
+
+}
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+   
+    height: 100%;
+
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
+
+.contenedor {
+
+    max-width: 100%;
+  
+    /*ancho máximo de la página*/
+    margin: 0px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+
+    /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(4, 1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "sidebar sidebar sidebar sidebar"
+        "contenido contenido contenido contenido"
+        "pie pie pie pie";
+}
+
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 0px;
+    border-radius: 0px;
+
+}
+
+.contenedor .encabezado {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    max-height: 100%;
+
+    background-repeat: no-repeat;
+    background-color: black;
+
+    grid-area: encabezado;
+    height: 100%;
+    color: antiquewhite;
+    opacity: 50%;
+    font-size: 30px;
+    display: grid;
+    animation-name: shower;
+    animation-duration: 10s;
+    position: initial;
+
+
+}
+
+
+
+.contenedor .contenido {
+
+
+
+    grid-area: contenido;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    padding: 30px;
+    height: 1470px;
+}
+
+.contenedor .sidebar {
+
+
+    display: flex;
+    background-color: black;
+    opacity: 50%;
+    color: antiquewhite;
+    grid-area: sidebar;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    font-family: 'Poppins', sans-serif;
+    font-weight:900px;
+}
+
+.sidebar a {
+    background: black;
+    display: flex;
+    
+    color: antiquewhite;
+    font-weight: bolder;
+
+    padding: 16px;
+
+    text-decoration: none;
+    text-align: center;
+    float: none;
+
+
+}
+
+.boton {
+    display: flex;
+    font-weight: bolder;
+    background-color: black;
+    color: black;
+  
+    margin: 0px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+
+    border-radius: 0px;
+
+
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 70%;
+    color: rgb(239, 236, 238)
+}
+
+
+.media {
+    align-content: end;
+}
+
+
+
+
+
+
+
+
+.contenedor .pie {
+    
+    background:rgb(71, 70, 73);
+    
+    color: antiquewhite;
+    grid-area: pie;
+    opacity: 50%;
+    height:150px;
+    width: 100%;
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+   
+
+
+
+
+
+}
+
+
+.encabezado1 {
+    font-family: 'italianno', cursive;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    padding: 5px;
+
+
+}
+
+.sociales {
+    color: antiquewhite;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.copyright {
+
+    align-content: right;
+    text-align: right;
+    padding: 10px;
+    color: antiquewhite;
+    margin-bottom: 5px;
+}
+
+.titulo2  {
+    margin-left: 10px;
+    
+    color:antiquewhite;
+    font-weight: bolder;
+}
+
+.copyright:hover {
+    filter: blur(2px);
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado "
+            "sidebar sidebar sidebar sidebar "
+            "contenido contenido contenido contenido"
+            "widget-1 widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2 widget-2 "
+            "widget-3 widget-3 widget-3 widget-3"
+            "pie pie pie pie";
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3small.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+
+    }
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "sidebar sidebar sidebar sidebar"
+            "contenido contenido contenido contenido"
+            "widget-1 widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2 widget-2"
+            "widget-2 widget-2 widget-2 widget-3"
+            "pie pie pie pie";
+
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3xsmall.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+        color: rgb(254, 248, 254);
+        font-size: 30px;
+        font-weight: lighter;
+
+
+
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        font-weight: lighter;
+        padding: 5px;
+    }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: block;
+        background-size: cover;
+    }
+
+}
