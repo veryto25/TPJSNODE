@@ -1,9 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    
-   
-    
+
+
+
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     background-size: cover;
     background-color: #fff;
     background-attachment: fixed;
-
+    height: 100%;
     font-family: 'Italianno', cursive;
     display: flex;
 
@@ -25,7 +25,7 @@ video {
     bottom: 0;
     min-width: 105%;
     min-height: 100%;
-   
+
     height: 100%;
 
     transform: translateX(calc((100% - 100vw) / 2));
@@ -36,7 +36,7 @@ video {
 .contenedor {
 
     max-width: 100%;
-  
+    height: 100%;
     /*ancho máximo de la página*/
     margin: 0px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
@@ -63,12 +63,13 @@ video {
 .contenedor .pie {
     padding: 0px;
     border-radius: 0px;
+    width: 100%;
 
 }
 
 .contenedor .encabezado {
-    position: absolute;
-    display: flex;
+
+
     min-width: 100%;
     max-height: 100%;
 
@@ -93,13 +94,14 @@ video {
 .contenedor .contenido {
 
 
-
+    position: relative;
     grid-area: contenido;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     justify-content: center;
     padding: 30px;
     height: 1470px;
+    
 }
 
 .contenedor .sidebar {
@@ -112,15 +114,16 @@ video {
     grid-area: sidebar;
     margin: 0;
     padding: 0;
+    width: 1510px;
     height: 90%;
     font-family: 'Poppins', sans-serif;
-    font-weight:900px;
+    font-weight: 900px;
 }
 
 .sidebar a {
     background: black;
     display: flex;
-    
+
     color: antiquewhite;
     font-weight: bolder;
 
@@ -138,7 +141,7 @@ video {
     font-weight: bolder;
     background-color: black;
     color: black;
-  
+
     margin: 0px;
     padding: 16px;
     text-decoration: none;
@@ -159,29 +162,27 @@ video {
 
 
 .media {
-    align-content: end;
+    align-content: flex-end;
+    margin: 10px;
 }
 
 
 
 
-
-
-
-
 .contenedor .pie {
-    
-    background:rgb(71, 70, 73);
-    
+
+    background: #454647;
+    display: flex;
     color: antiquewhite;
     grid-area: pie;
-    opacity: 50%;
-    height:150px;
+    display: inline-block;
+
+    height: 250px;
     width: 100%;
-    position:relative;
+
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-   
+
 
 
 
@@ -202,24 +203,24 @@ video {
 
 .sociales {
     color: antiquewhite;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-left: 10px;
+
+    padding-bottom: 2px;
+    margin-left: 12px;
 }
 
 .copyright {
 
-    align-content: right;
+    align-content: end;
     text-align: right;
     padding: 10px;
     color: antiquewhite;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.titulo2  {
+.titulo2 {
     margin-left: 10px;
-    
-    color:antiquewhite;
+
+    color: antiquewhite;
     font-weight: bolder;
 }
 
@@ -228,64 +229,273 @@ video {
     transition: 0.2s;
 }
 
+#block1 {
+    display: block
+}
+
+#block2 {
+    display: none
+}
+#block3 {
+    display: none
+}
+
 @media screen and (max-width: 768px) {
     .contenedor {
         grid-template-areas: "encabezado encabezado encabezado encabezado "
             "sidebar sidebar sidebar sidebar "
             "contenido contenido contenido contenido"
-            "widget-1 widget-1 widget-1 widget-1"
-            "widget-2 widget-2 widget-2 widget-2 "
-            "widget-3 widget-3 widget-3 widget-3"
             "pie pie pie pie";
+        display: grid;
+        width: 100%;
+
+    }
+
+    video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 105%;
+        min-height: 100%;
+
+        height: 100%;
+
+        transform: translateX(calc((100% - 100vw) / 2));
+        z-index: -2;
+    }
+
+
+
+
+    #block1 {
+        display: none;
+
+    }
+
+    #block2 {
+        display: block;
+    }
+    #block3 {
+        display: none
     }
 
     .contenedor .encabezado {
-        background: url(./img/carrusel3small.png);
-        background-size: cover;
+
         position: relative;
         grid-area: encabezado;
-        height: 400px;
-
+        display: flex;
+        height: 100px;
+        align-items: center;
+        width: 690px;
+        font-size: 15px;
     }
 
 
 
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: flexbox;
+        height: 950px;
+        width: 760px;
+
+    }
+
+    .contenedor .sidebar {
+        display: flex;
+
+        grid-area: sidebar;
+        background-color: black;
+        opacity: 50%;
+        color: antiquewhite;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 90%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900px;
+        font-size: 10px;   }
+
+    .sidebar a {
+        background: black;
+        display: flex;
+
+        color: antiquewhite;
+        font-weight: bolder;
+
+        padding: 16px;
+
+        text-decoration: none;
+        text-align: center;
+        float: none;
+
+    }
+
+    .carousel {
+        width: 600px;
+        
+    }
+
+    .contenedor .pie {
+
+        background: #454647;
+        color: antiquewhite;
+        grid-area: pie;
+        display: block;
+        height: 250px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
 
 
 
+
+
+
+    }
+
+    .copyright {
+        align-items: end;
+        margin-right: 30px;
+    }
+
+    .encabezado1 {
+        font-family: 'italianno', cursive;
+        text-align: center;
+        color: antiquewhite;
+        font-size: 25px;
+        padding: 5px;
+        
+
+    }
 }
-
-
 
 @media screen and (max-width: 450px) {
     .contenedor {
         grid-template-areas: "encabezado encabezado encabezado encabezado"
             "sidebar sidebar sidebar sidebar"
             "contenido contenido contenido contenido"
-            "widget-1 widget-1 widget-1 widget-1"
-            "widget-2 widget-2 widget-2 widget-2"
-            "widget-2 widget-2 widget-2 widget-3"
             "pie pie pie pie";
+        display: grid;
+        width: 850px;
+        position:absolute;
+        
+    
+        
 
+
+    }
+
+
+    video {
+        position:absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        
+
+        transform: translateX(calc((100% - 100vw) / 2));
+        z-index: -2;
+    }
+
+
+
+
+    #block1 {
+        display: none;
+
+    }
+
+    #block2 {
+        display: none;
+    }
+    #block3 {
+        display:block;
     }
 
     .contenedor .encabezado {
-        background: url(./img/carrusel3xsmall.png);
-        background-size: cover;
+
         position: relative;
         grid-area: encabezado;
-        height: 400px;
-        color: rgb(254, 248, 254);
+        display:block;
+        height: 100px;
+        align-items:center;
+        align-content: center;
+        width: 100%;
         font-size: 30px;
-        font-weight: lighter;
+
+    }
+
+
+
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: block;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .contenedor .sidebar {
+        display: block;
+
+        grid-area: sidebar;
+        background-color: black;
+        opacity: 50%;
+        color: antiquewhite;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 90%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900px;
+    }
+
+    .sidebar a {
+        background: black;
+        display: block;
+
+        color: antiquewhite;
+        font-weight: bolder;
+
+        padding: 16px;
+
+        text-decoration: none;
+        text-align: center;
+        float: none;
+
+    }
+
+    .carousel {
+        width: 100%;
+        opacity: 50%;
+    }
+
+    .contenedor .pie {
+
+        background: #454647;
+        color: antiquewhite;
+        grid-area: pie;
+        display: flex;
+        height: 250px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+
+
 
 
 
 
     }
 
+    .copyright {
+        align-items: end;
+        margin-right: 30px;
+    }
+
     .encabezado1 {
-        text-align: right;
+        text-align: center;
         font-size: 40px;
         font-weight: lighter;
         padding: 5px;
@@ -295,6 +505,32 @@ video {
         grid-area: contenido;
         display: block;
         background-size: cover;
+        height:100%;
+        align-content: center;
+    }
+
+    boton {
+        display: block;
+        font-weight: bolder;
+        background-color: black;
+        color: black;
+
+        margin: 0px;
+        padding: 16px;
+        text-decoration: none;
+        text-align: center;
+        float: none;
+
+        border-radius: 0px;
+
+
+    }
+
+    .boton:hover {
+        transform: scale(1.1);
+        background-color: rgb(156, 156, 156);
+        opacity: 70%;
+        color: rgb(239, 236, 238)
     }
 
 }
