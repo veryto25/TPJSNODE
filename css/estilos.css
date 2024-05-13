@@ -14,8 +14,10 @@ body {
     background-color: #fff;
     background-attachment: fixed;
     height: 100%;
+    width: 100%;
     font-family: 'Italianno', cursive;
     display: flex;
+
 
 }
 
@@ -23,13 +25,23 @@ video {
     position: absolute;
     right: 0;
     bottom: 0;
+    object-fit: cover;
     min-width: 105%;
     min-height: 100%;
-
+    width: 100%;
     height: 100%;
-
     transform: translateX(calc((100% - 100vw) / 2));
     z-index: -2;
+    /* position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2; */
 }
 
 
@@ -41,7 +53,7 @@ video {
     margin: 0px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
-
+    gap:0px;
     /*nos ahorramos tenes que poner márgenes entre los elementos*/
 
     /*3 columnas: contenido (con 2 widgets) + sidebar*/
@@ -64,6 +76,7 @@ video {
     padding: 0px;
     border-radius: 0px;
     width: 100%;
+
 
 }
 
@@ -100,8 +113,8 @@ video {
     font-weight: bold;
     justify-content: center;
     padding: 30px;
-    height: 1470px;
-    
+    height: 100%;
+
 }
 
 .contenedor .sidebar {
@@ -114,7 +127,7 @@ video {
     grid-area: sidebar;
     margin: 0;
     padding: 0;
-    width: 1510px;
+    width: 99vw;
     height: 90%;
     font-family: 'Poppins', sans-serif;
     font-weight: 900px;
@@ -140,8 +153,8 @@ video {
     display: flex;
     font-weight: bolder;
     background-color: black;
-    color: black;
-
+    color: white;
+    opacity: 50%;
     margin: 0px;
     padding: 16px;
     text-decoration: none;
@@ -156,30 +169,36 @@ video {
 .boton:hover {
     transform: scale(1.1);
     background-color: rgb(156, 156, 156);
-    opacity: 70%;
-    color: rgb(239, 236, 238)
-}
-
-
-.media {
-    align-content: flex-end;
-    margin: 10px;
+    opacity: 50%;
+    color: black;
 }
 
 
 
+
+.carousel {
+    width: 1000px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 215px;
+    margin-top: 100px;
+}
+
+.titulo1 {
+    font-size: 50px;
+}
 
 .contenedor .pie {
 
     background: #454647;
-    display: flex;
+
     color: antiquewhite;
     grid-area: pie;
-    display: inline-block;
+    display: flexbox;
 
-    height: 250px;
+    height:100%;
     width: 100%;
-
+    padding:10px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
 
@@ -203,9 +222,18 @@ video {
 
 .sociales {
     color: antiquewhite;
-
+    padding-left: 10px; 
     padding-bottom: 2px;
-    margin-left: 12px;
+    margin-left: 10px;
+}
+.titulo2 {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.media{
+    padding-left: 10px;
+    align-content: flex-end;
+    margin: 10px;
 }
 
 .copyright {
@@ -214,15 +242,10 @@ video {
     text-align: right;
     padding: 10px;
     color: antiquewhite;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.titulo2 {
-    margin-left: 10px;
 
-    color: antiquewhite;
-    font-weight: bolder;
-}
 
 .copyright:hover {
     filter: blur(2px);
@@ -230,14 +253,25 @@ video {
 }
 
 #block1 {
-    display: block
+    display: block;
 }
 
 #block2 {
     display: none
 }
+
 #block3 {
     display: none
+}
+
+.musica {
+    position: end;
+}
+#ofertas2{
+    display: none;
+}
+#ofertas1{
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -248,17 +282,21 @@ video {
             "pie pie pie pie";
         display: grid;
         width: 100%;
+        justify-content: center;
 
     }
-
+    
     video {
         position: absolute;
         right: 0;
         bottom: 0;
         min-width: 105%;
         min-height: 100%;
+        justify-content:center;
 
-        height: 100%;
+        height: 850px;
+        width: 700px;
+        margin-left: 40px;
 
         transform: translateX(calc((100% - 100vw) / 2));
         z-index: -2;
@@ -273,8 +311,9 @@ video {
     }
 
     #block2 {
-        display: block;
+        display:block;
     }
+
     #block3 {
         display: none
     }
@@ -286,23 +325,30 @@ video {
         display: flex;
         height: 100px;
         align-items: center;
-        width: 690px;
+        justify-content: center;
+        width: 100%;
         font-size: 15px;
+        background-color: black;
+        opacity: 50%;
+        justify-content: center;
     }
 
 
 
     .contenedor .contenido {
         grid-area: contenido;
-        display: flexbox;
-        height: 950px;
-        width: 760px;
+        display: flex;
+        height: 100%;
+        width: 768px;
+        justify-content: center;
+        flex-wrap: wrap;
+
 
     }
 
     .contenedor .sidebar {
         display: flex;
-
+        justify-content: center;
         grid-area: sidebar;
         background-color: black;
         opacity: 50%;
@@ -313,15 +359,18 @@ video {
         height: 90%;
         font-family: 'Poppins', sans-serif;
         font-weight: 900px;
-        font-size: 10px;   }
-
+        font-size: 10px;
+    }
+    .titulo2{
+        padding-left:25px;
+    }
     .sidebar a {
         background: black;
         display: flex;
-
+        opacity: 50%;
         color: antiquewhite;
         font-weight: bolder;
-
+        font-size: 16px;
         padding: 16px;
 
         text-decoration: none;
@@ -330,32 +379,41 @@ video {
 
     }
 
-    .carousel {
-        width: 600px;
-        
-    }
+    
+
+
 
     .contenedor .pie {
 
         background: #454647;
         color: antiquewhite;
         grid-area: pie;
-        display: block;
-        height: 250px;
+        display: inline-block;
+        padding: 25px;
+        height: 310px;
         width: 100%;
         font-family: 'Poppins', sans-serif;
         font-weight: bolder;
 
+    }
 
+    .media {
+        padding-left: 20px;
+    }
+    .sociales{
+         padding-left: 20px;
+    }
+    #ofertas {
+        display: none;
+    }
 
-
-
-
+    #ofertas1 {
+        display: block;
     }
 
     .copyright {
         align-items: end;
-        margin-right: 30px;
+
     }
 
     .encabezado1 {
@@ -364,9 +422,32 @@ video {
         color: antiquewhite;
         font-size: 25px;
         padding: 5px;
-        
+
 
     }
+
+    .titulo2 {
+        margin-left: 10px;
+
+        color: antiquewhite;
+        font-weight: bolder;
+    }
+    .copyright {
+
+        align-content: end;
+        text-align: right;
+        padding: 10px;
+        color: antiquewhite;
+        margin-bottom: 20px;
+    }
+    
+    
+    
+    .copyright:hover {
+        filter: blur(2px);
+        transition: 0.2s;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -376,29 +457,41 @@ video {
             "contenido contenido contenido contenido"
             "pie pie pie pie";
         display: grid;
-        width: 850px;
-        position:absolute;
-        
-    
-        
+
+
+
+
 
 
     }
 
 
     video {
-        position:absolute;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 105%;
+        min-height: 100%;
+        transform: translateX(calc((100% - 100vw) / 2));
+        z-index: -2;
+        height: 150vw;
+        /* position: absolute;
         right: 0;
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
-        
+        height: 100%; */
+        /* height: 170vw;
+        width: 170vw; */
+
 
         transform: translateX(calc((100% - 100vw) / 2));
         z-index: -2;
     }
 
-
+    iframe{
+        width: 100%;
+    }
 
 
     #block1 {
@@ -409,7 +502,19 @@ video {
     #block2 {
         display: none;
     }
+
     #block3 {
+        display: block;
+    }
+
+    #ofertas {
+        display: none;
+    }
+
+    #ofertas1 {
+        display: none;
+    }
+    #ofertas2 {
         display:block;
     }
 
@@ -417,9 +522,9 @@ video {
 
         position: relative;
         grid-area: encabezado;
-        display:block;
+        display: block;
         height: 100px;
-        align-items:center;
+        align-items: center;
         align-content: center;
         width: 100%;
         font-size: 30px;
@@ -431,7 +536,7 @@ video {
     .contenedor .contenido {
         grid-area: contenido;
         display: block;
-        height: 100%;
+        height: 95%;
         width: 100%;
 
     }
@@ -440,13 +545,13 @@ video {
         display: block;
 
         grid-area: sidebar;
-        background-color: black;
+        background-color: white;
         opacity: 50%;
         color: antiquewhite;
-        margin: 0;
+        margin: 0px;
         padding: 0;
         width: 100%;
-        height: 90%;
+        height: 100%;
         font-family: 'Poppins', sans-serif;
         font-weight: 900px;
     }
@@ -454,12 +559,11 @@ video {
     .sidebar a {
         background: black;
         display: block;
-
         color: antiquewhite;
         font-weight: bolder;
-
+        margin: 8px;
         padding: 16px;
-
+        opacity: 50%;
         text-decoration: none;
         text-align: center;
         float: none;
@@ -469,6 +573,8 @@ video {
     .carousel {
         width: 100%;
         opacity: 50%;
+        position: relative;
+        margin: 20px;
     }
 
     .contenedor .pie {
@@ -477,8 +583,9 @@ video {
         color: antiquewhite;
         grid-area: pie;
         display: block;
-        height: 250px;
+        height: 100%;
         width: 100%;
+        padding: 20px;
         font-family: 'Poppins', sans-serif;
         font-weight: bolder;
 
@@ -491,7 +598,7 @@ video {
 
     .copyright {
         align-items: end;
-        margin-right: 30px;
+
     }
 
     .encabezado1 {
@@ -501,36 +608,31 @@ video {
         padding: 5px;
     }
 
-    .contenedor .contenido {
-        grid-area: contenido;
-        display: block;
-        background-size: cover;
-        height:100%;
-        align-content: center;
-    }
 
-    boton {
+
+    .boton {
         display: block;
         font-weight: bolder;
         background-color: black;
         color: black;
 
-        margin: 0px;
+        margin: 10px;
         padding: 16px;
         text-decoration: none;
         text-align: center;
         float: none;
 
-        border-radius: 0px;
+        border-radius: 2px;
 
 
     }
 
     .boton:hover {
-        transform: scale(1.1);
+        transform: scale(1.3);
         background-color: rgb(156, 156, 156);
-        opacity: 70%;
-        color:black;
+        opacity: 50%;
+        color: black;
     }
 
 }
+
