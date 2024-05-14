@@ -22,7 +22,7 @@ body {
 }
 
 video {
-    position: absolute;
+    /* position: absolute;
     right: 0;
     bottom: 0;
     object-fit: cover;
@@ -31,7 +31,15 @@ video {
     width: 100%;
     height: 100%;
     transform: translateX(calc((100% - 100vw) / 2));
-    z-index: -2;
+    z-index: -2; */
+    position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 105%;
+        min-height: 100%;
+        transform: translateX(calc((100% - 100vw) / 2));
+        z-index: -2;
+        height: 70vw;
     /* position: absolute;
     right: 0;
     bottom: 0;
@@ -53,7 +61,7 @@ video {
     margin: 0px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
-    gap:0px;
+    gap: 0px;
     /*nos ahorramos tenes que poner márgenes entre los elementos*/
 
     /*3 columnas: contenido (con 2 widgets) + sidebar*/
@@ -196,9 +204,9 @@ video {
     grid-area: pie;
     display: flexbox;
 
-    height:100%;
+    height: 100%;
     width: 100%;
-    padding:10px;
+    padding: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
 
@@ -222,15 +230,17 @@ video {
 
 .sociales {
     color: antiquewhite;
-    padding-left: 10px; 
+    padding-left: 10px;
     padding-bottom: 2px;
     margin-left: 10px;
 }
+
 .titulo2 {
     padding-left: 10px;
     margin-left: 10px;
 }
-.media{
+
+.media {
     padding-left: 10px;
     align-content: flex-end;
     margin: 10px;
@@ -267,10 +277,12 @@ video {
 .musica {
     position: end;
 }
-#ofertas2{
+
+#ofertas2 {
     display: none;
 }
-#ofertas1{
+
+#ofertas1 {
     display: none;
 }
 
@@ -285,21 +297,29 @@ video {
         justify-content: center;
 
     }
-    
+
     video {
-        position: absolute;
+        /* position: absolute;
         right: 0;
         bottom: 0;
         min-width: 105%;
         min-height: 100%;
-        justify-content:center;
+        justify-content: center;
 
         height: 850px;
         width: 700px;
         margin-left: 40px;
 
         transform: translateX(calc((100% - 100vw) / 2));
+        z-index: -2; */
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 105%;
+        min-height: 100%;
+        transform: translateX(calc((100% - 100vw) / 2));
         z-index: -2;
+        height: 150vw;
     }
 
 
@@ -311,7 +331,7 @@ video {
     }
 
     #block2 {
-        display:block;
+        display: block;
     }
 
     #block3 {
@@ -361,9 +381,11 @@ video {
         font-weight: 900px;
         font-size: 10px;
     }
-    .titulo2{
-        padding-left:25px;
+
+    .titulo2 {
+        padding-left: 25px;
     }
+
     .sidebar a {
         background: black;
         display: flex;
@@ -379,7 +401,7 @@ video {
 
     }
 
-    
+
 
 
 
@@ -400,9 +422,11 @@ video {
     .media {
         padding-left: 20px;
     }
-    .sociales{
-         padding-left: 20px;
+
+    .sociales {
+        padding-left: 20px;
     }
+
     #ofertas {
         display: none;
     }
@@ -432,6 +456,7 @@ video {
         color: antiquewhite;
         font-weight: bolder;
     }
+
     .copyright {
 
         align-content: end;
@@ -440,9 +465,9 @@ video {
         color: antiquewhite;
         margin-bottom: 20px;
     }
-    
-    
-    
+
+
+
     .copyright:hover {
         filter: blur(2px);
         transition: 0.2s;
@@ -489,7 +514,7 @@ video {
         z-index: -2;
     }
 
-    iframe{
+    iframe {
         width: 100%;
     }
 
@@ -514,8 +539,9 @@ video {
     #ofertas1 {
         display: none;
     }
+
     #ofertas2 {
-        display:block;
+        display: block;
     }
 
     .contenedor .encabezado {
@@ -635,4 +661,3 @@ video {
     }
 
 }
-
