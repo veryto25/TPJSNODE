@@ -4,7 +4,7 @@ const telefono = document.getElementById("number")
 const asunto = document.getElementById("subject")
 const parrafo = document.getElementById("warnings")
 const mensaje = document.getElementById("message")
-const form =document.getElementById ("form")
+const form = document.getElementById("form")
 
 form.addEventListener("submit", e => {
     e.preventDefault()
@@ -15,41 +15,50 @@ form.addEventListener("submit", e => {
     let regexTelefono = /^\d{10}$/
     parrafo.innerHTML = ""
 
-    if(nombre.value.length < 3){
+    if (nombre.value.length < 3) {
         warnings += `Nombre no valido. Min 3 caract. <br>`
         entrar = true
     }
-    if(!regexEmail.test(email.value)){
+    if (!regexEmail.test(email.value)) {
         warnings += `Email no valido. <br>`
         entrar = true
     }
-    if(!regexTelefono.test(telefono.value)){
+    if (!regexTelefono.test(telefono.value)) {
         warnings += `Numero no valido. 10 caract. <br>`
         entrar = true
     }
 
-    if(asunto.value.length > 20 || asunto.value.length < 3){
+    if (asunto.value.length > 20 || asunto.value.length < 3) {
         warnings += `Asunto min 3 máx 20 caracteres. <br>`
         entrar = true
     }
 
-    if(mensaje.value.length > 100 || mensaje.value.length < 3){
+    if (mensaje.value.length > 100 || mensaje.value.length < 3) {
         warnings += `Mensaje min 3 y máx 100 caracteres <br>`
         entrar = true
     }
 
-    if(entrar){
+    if (entrar) {
         parrafo.innerHTML = warnings
-    }else{
-        alert("Gracias por contactarnos. En breve nos comunicaremos!")
-        document.getElementById("form").reset()
+    }
+    else {
+        const data = new FormData(e.target);
+        fetch(e.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                Accept: "application/json"
+            }
+        }).then(() => {
+            alert("Gracias por contactarnos. En breve nos comunicaremos!")
+            form.reset()
+        })
+
     }
 })
 
-
-
-function cleanForm(){
-    document.getElementById("form").reset()
+function cleanForm() {
+    form.reset()
 }
 
 
