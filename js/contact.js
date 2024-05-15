@@ -4,6 +4,7 @@ const telefono = document.getElementById("number")
 const asunto = document.getElementById("subject")
 const parrafo = document.getElementById("warnings")
 const mensaje = document.getElementById("message")
+const form =document.getElementById ("form")
 
 form.addEventListener("submit", e => {
     e.preventDefault()
