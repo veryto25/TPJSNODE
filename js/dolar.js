@@ -8,7 +8,7 @@ const obtenerDolar = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        apiData.innerText = JSON.stringify(`Precio de Venta: ${data.venta}  Precio de Compra: ${data.compra} Fecha: ${data.fecha}`)
+        apiData.innerText = `Precio de Venta: ${data.venta}\nPrecio de Compra: ${data.compra}\nFecha: ${data.fecha}`;
         })
 
 
