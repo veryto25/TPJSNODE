@@ -5,6 +5,8 @@ const asunto = document.getElementById("subject")
 const parrafo = document.getElementById("warnings")
 const mensaje = document.getElementById("message")
 const form = document.getElementById("form")
+const jquery = jquery()
+
 
 form.addEventListener("submit", e => {
     e.preventDefault()
@@ -61,4 +63,39 @@ function cleanForm() {
     form.reset()
 }
 
+// log in
 
+
+// $(document).on(function(){
+//     $('#login').hide();
+//     $('#open_close').onclick(function(){
+//         $('#login').slideToggle();
+
+//     });
+// });
+
+
+// serchForm
+
+
+const searchForm = document.querySelector('.search-form');
+
+document.querySelector('#search-btn').onclick = () => {
+    searchForm.classList.toggle('active');
+  
+    loginForm.classList.remove('active');
+    
+}
+
+// loginrobado
+
+
+const loginForm = document.querySelector('.login');
+
+document.querySelector('#enviar-btnlog').onclick = () => {
+    loginForm.classList.toggle('active');
+    searchForm.classList.remove('active');
+    navbar.classList.remove('active');
+
+
+}

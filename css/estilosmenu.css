@@ -1,0 +1,315 @@
+/* Estilos para todo el proyecto */
+body {
+    background-image: radial-gradient(circle, rgba(223, 211, 217, 0.769) 0%, rgba(121, 135, 169, 0.345) 100%), url(/imágenes/fondos/PINEDAVERSACE3GDE.png);
+    background-repeat: no-repeat;
+    color: black;
+    background-size: cover;
+    /* background-color: #fff; */
+    background-attachment: fixed;
+    opacity: 90%;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    margin:30px;
+    
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    color: white;
+
+
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "contenido contenido contenido contenido"
+        "contenido contenido contenido contenido"
+        "pie pie pie pie";
+}
+
+.contenedor .contenido {
+
+
+    opacity: 70%;
+    grid-area: contenido;
+    font-family: 'Italianno', cursive;
+
+    font-weight: bold;
+    justify-content: center;
+    padding: 30px;
+}
+
+.tabla .contenedor-centrado {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    padding: 20px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    display: block;
+    background-color: rgb(15, 91, 94);
+    opacity: 70%;
+    gap: 20px;
+    justify-content: center;
+    color: black;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+
+    color: black;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: black;
+}
+
+.contenedor .encabezado {
+    grid-area: encabezado;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    width: 1200px;
+}
+
+.contenedor .pie {
+    grid-area: pie;
+}
+
+.contenedor .encabezado .titulo3 {
+
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+.contenedor .encabezado .titulo1 {
+
+    font-size: 60px;
+    font-family: 'Italianno', cursive;
+    align-items: left;
+    text-align: left;
+
+    padding: 20px;
+}
+
+
+form {
+    max-width: 400px;
+    opacity: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(206, 231, 234);
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.contenido .tabla {
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    align-content: center;
+
+    border: 3px solid rgb(150, 119, 153);
+    border-radius: 20px;
+}
+
+table {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+   
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: plum;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #38334e;
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    margin: 20px;
+    background-color: black;
+    padding: 10px;
+    opacity: 85%;
+    color: black;
+    border: none;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: red;
+    opacity: 85%;
+
+    transform: scale(1.1);
+    transition: .2s;
+
+}
+
+.bt {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 4px;
+    /* background-color: plum; */
+    padding: 10px;
+
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-weight: 900;
+
+
+
+    /* cursor: pointer;
+    text-decoration: none;
+    font-size: 85%; */
+}
+
+/* .contenedor-centrado:hover {
+   
+    color: beige;
+    transform: scale(1.1);
+    transition: .2s;
+} */
+
+th {
+    padding: 50 px;
+    gap: px;
+    margin: 20px;
+
+}
+
+
+
+.menu {
+    color:white;
+    align-items: center;
+    justify-content: center;
+    background: rgb(18, 95, 97);
+    margin: 20px;
+    color: white;
+    background-color:;
+    padding: 10px;
+    opacity: 90%;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+.menu:hover {
+    background-color:aqua;
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.lista {
+
+    align-items: right;
+    align-content: center;
+    border: 2px solid grey;
+    border-radius: 8px;
+    gap: 20px;
+    padding: 30px;
+
+}
+th {
+    padding: 5px;
+    gap: 20;
+    margin: 10px;
+
+}
+
+/* a {
+    padding: 8px;
+    margin:4px;
+    background-color: #fdab13;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+a:hover {
+    background-color: #cd7b00;
+} */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado "
+            "contenido contenido contenido contenido"
+            "contenido contenido contenido contenido"
+
+            "pie pie pie pie";
+    }
+
+    .contenedor {
+        margin: 5px;
+        max-width: 600px;
+    }
+
+}

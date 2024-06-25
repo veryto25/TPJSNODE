@@ -24,6 +24,10 @@
         rel="stylesheet">
     <title>Elle... bags & shoes</title>
     <link rel="icon" href="./imágenes/zapatoico.ico">
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="./js/contact.js"></script>
+
+
 </head>
 
 <body>
@@ -45,17 +49,31 @@
             <div class="encabezado1">
                 <h2 class="titulo1">Elle....Bags and shoes</h2>
             </div>
+
+            <nav class="sidebar">
+                <a class="boton" href="index.html">Home</a>
+                <a class="boton" href="./we.html">We</a>
+                <a class="boton" href="she.html">She</a>
+                <a class="boton" href="he.html">He</a>
+                <a class="boton" href="Bags.html">Bags</a>
+                <a class="boton" href="contact.html">Contact</a>
+                <a class="boton" href="iframe.html">Location</a>
+
+             
+                <form action="#" id="login" class="serch-form">
+                    <h3>Log in</h3>
+                    <label>Usuario: </label>
+                    <input type="text" , id="usuario" , placeholder="Usuario" />
+                    <label>Contraseña:</label>
+                    <input type="pasword" , id="pass" , placeholder="contraseña" />
+                    <input type="submit" , value="enviar" , id="btnlog" class="enviar" />
+
+
+                    </form>
+
+
+            </nav>
         </header>
-        <nav class="sidebar">
-            <a class="boton" href="index.html">Home</a>
-            <a class="boton" href="./we.html">We</a>
-            <a class="boton" href="she.html">She</a>
-            <a class="boton" href="he.html">He</a>
-            <a class="boton" href="Bags.html">Bags</a>
-            <a class="boton" href="contact.html">Contact</a>
-            <a class="boton" href="iframe.html">Location</a>
-            
-        </nav>
         <main class="contenido">
             <section id="ofertas">
 
@@ -78,21 +96,24 @@
             <div>
                 <a href="https://www.facebook.com/ELLEuk?locale=es_LA"><img class="sociales"
                         src="./imágenes/facefooter.png" alt="face"></a>
-                <a href=""><img class="sociales"
-                        src="./imágenes/instafooter.png" alt="instagram"></a>
+                <a href=""><img class="sociales" src="./imágenes/instafooter.png" alt="instagram"></a>
                 <a href="https://web.whatsapp.com/"><img class="sociales" src="./imágenes/whattsapfooter.png"
                         alt="whattsap"></a>
             </div>
             <div class="media">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2FkIQS7yJDqYHpnWdmAzIm?utm_source=generator" width="35%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <div>
-                <p class="copyright">&copy; Codo a Codo. 2024</p>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/2FkIQS7yJDqYHpnWdmAzIm?utm_source=generator"
+                    width="35%" height="152" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <div>
+                    <p class="copyright">&copy; Codo a Codo. 2024</p>
 
-            </div>
+                </div>
 
         </footer>
     </div>
-    
+
 </body>
 
 </html>
